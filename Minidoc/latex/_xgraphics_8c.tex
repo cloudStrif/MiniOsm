@@ -1,0 +1,292 @@
+\hypertarget{_xgraphics_8c}{\section{sources/\-Xgraphics.c File Reference}
+\label{_xgraphics_8c}\index{sources/\-Xgraphics.\-c@{sources/\-Xgraphics.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$libxml/xmlmemory.\-h$>$}\\*
+{\ttfamily \#include $<$libxml/parser.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L\-\_\-gfx\-Primitives.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L\-\_\-mixer.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L\-\_\-rotozoom.\-h$>$}\\*
+{\ttfamily \#include $<$curl/curl.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L\-\_\-image.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L\-\_\-ttf.\-h$>$}\\*
+{\ttfamily \#include $<$glib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Xgraphics.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}fgifsdl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Draw\-Sdl1.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cercle.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_xgraphics_8c_a39ab1f0ff2aa24a6ec6de7e8a1cb7e16}{res} (int n)
+\item 
+void \hyperlink{_xgraphics_8c_a79044dde8305e7239e473a579f9039bc}{res2} (int n)
+\item 
+int \hyperlink{_xgraphics_8c_af933e6c732d7d7fddbc6b06be1139421}{dessine\-Pas} (int a, int b)
+\item 
+void \hyperlink{_xgraphics_8c_a060e87ee10956b4e227b5947417b869d}{rendu} (\hyperlink{structways}{ways} $\ast$chemins, int size, double minla, double maxla, double minlo, double maxlo)
+\item 
+int \hyperlink{_xgraphics_8c_a5fceaf65330c97c3dbb1bd7f41cacb34}{Key\-Hit} ()
+\item 
+void \hyperlink{_xgraphics_8c_a0a77e339003d56bf0394fa455add5f43}{rendu3} ()
+\item 
+void \hyperlink{_xgraphics_8c_a36923af8efd56d6e07f49ed1219a28a3}{zonage} ()
+\item 
+void \hyperlink{_xgraphics_8c_abbeda14fe70a4fe2af408a181ca45a80}{dessin} (\hyperlink{structways}{ways} $\ast$chemins, int size, double minla, double maxla, double minlo, double maxlo, int mode, int zo, int zo2, int zo3, int zo4, int angular, int ang, int theta)
+\item 
+void \hyperlink{_xgraphics_8c_ab480b96aa233c17e4027c3b1d98c3960}{order} (\hyperlink{structconteneur}{conteneur} $\ast$chemins, double minla, double maxla, double minlo, double maxlo, int mode, int zo, int zo2, int zo3, int zo4, int angular, int ang, int theta)
+\item 
+void \hyperlink{_xgraphics_8c_a14b1682ee66aecb797e50ae1ac929189}{update} (double minla, double maxla, double minlo, double maxlo)
+\item 
+void \hyperlink{_xgraphics_8c_acecc85ef37f506121c8966aba65b56fe}{rendu2} (\hyperlink{structconteneur}{conteneur} $\ast$chemins, int size, double minla, double maxla, double minlo, double maxlo, int mode, int zo, int zo2, int zo3, int zo4, int angular, int ang, int theta, \hyperlink{structcolour}{colour} $\ast$styl, char $\ast$fi)
+\item 
+double \hyperlink{_xgraphics_8c_a4db1757380f2184331f76c8b581a4c6a}{radians} (double degrees)
+\item 
+double \hyperlink{_xgraphics_8c_a0d05fa75dd55628afb68661beab3170f}{lat\-\_\-to\-\_\-y} (double lat)
+\item 
+double \hyperlink{_xgraphics_8c_a62bd9cd9f8002b0c2a5156c3bdd0428a}{lon\-\_\-to\-\_\-x} (double lon)
+\item 
+double $\ast$ \hyperlink{_xgraphics_8c_a94cbb2f5e8d41c1c68c4fec6f755ded7}{convert} (double lat, double lon, double map\-Lon\-Left, double map\-Lon\-Right, double map\-Lat\-Bottom, int mode, int zo, int zo2, int zo3, int zo4, int angular, int ang, int theta)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\-D\-L\-\_\-\-Surface $\ast$ \hyperlink{_xgraphics_8c_a78fa3957d73de49cb81d047857504218}{screen}
+\item 
+S\-D\-L\-\_\-\-Surface $\ast$ \hyperlink{_xgraphics_8c_a41f478d89edd900e099da6750dc8df1d}{screen2}
+\item 
+int \hyperlink{_xgraphics_8c_a99aba148640fe3a90089aeacf7a81d02}{colar} =70
+\item 
+T\-T\-F\-\_\-\-Font $\ast$ \hyperlink{_xgraphics_8c_a49a11b0728728090fa1189391c9fe0c8}{police} =N\-U\-L\-L
+\item 
+int \hyperlink{_xgraphics_8c_a96613d07df4205a377ad9cb38b3a9d27}{option} =0
+\item 
+S\-D\-L\-\_\-\-Color \hyperlink{_xgraphics_8c_a1c8c3102d21fd30e2488af144d5aea63}{couleur\-Noire} = \{0, 0, 0\}
+\item 
+\hyperlink{structcolour}{colour} $\ast$ \hyperlink{_xgraphics_8c_a52219a465335ec8c82398faae6e52e2a}{style}
+\item 
+int \hyperlink{_xgraphics_8c_ab4ce808a221afc3eef9058a4ee857af3}{taillex} =1000
+\item 
+int \hyperlink{_xgraphics_8c_a61c9b88f8251dcf5e6dc2673122259c1}{tailley} =700
+\item 
+\hyperlink{structcercle}{cercle} $\ast$ \hyperlink{_xgraphics_8c_ac8b5d58621d004cb42a95114842efdc7}{list}
+\item 
+int \hyperlink{_xgraphics_8c_a50666afddc588c2063b2ca4f614215f3}{listsize}
+\item 
+int \hyperlink{_xgraphics_8c_a9aabd3f4f5591c3aaa01b427abb2199b}{mer} =0
+\item 
+int \hyperlink{_xgraphics_8c_a2fe49047918f49e9b48a6b33dea20143}{drawing} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_xgraphics_8c_a94cbb2f5e8d41c1c68c4fec6f755ded7}{\index{Xgraphics.\-c@{Xgraphics.\-c}!convert@{convert}}
+\index{convert@{convert}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{convert}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ convert (
+\begin{DoxyParamCaption}
+\item[{double}]{lat, }
+\item[{double}]{lon, }
+\item[{double}]{map\-Lon\-Left, }
+\item[{double}]{map\-Lon\-Right, }
+\item[{double}]{map\-Lat\-Bottom, }
+\item[{int}]{mode, }
+\item[{int}]{zo, }
+\item[{int}]{zo2, }
+\item[{int}]{zo3, }
+\item[{int}]{zo4, }
+\item[{int}]{angular, }
+\item[{int}]{ang, }
+\item[{int}]{theta}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a94cbb2f5e8d41c1c68c4fec6f755ded7}
+\hypertarget{_xgraphics_8c_abbeda14fe70a4fe2af408a181ca45a80}{\index{Xgraphics.\-c@{Xgraphics.\-c}!dessin@{dessin}}
+\index{dessin@{dessin}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{dessin}]{\setlength{\rightskip}{0pt plus 5cm}void dessin (
+\begin{DoxyParamCaption}
+\item[{{\bf ways} $\ast$}]{chemins, }
+\item[{int}]{size, }
+\item[{double}]{minla, }
+\item[{double}]{maxla, }
+\item[{double}]{minlo, }
+\item[{double}]{maxlo, }
+\item[{int}]{mode, }
+\item[{int}]{zo, }
+\item[{int}]{zo2, }
+\item[{int}]{zo3, }
+\item[{int}]{zo4, }
+\item[{int}]{angular, }
+\item[{int}]{ang, }
+\item[{int}]{theta}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_abbeda14fe70a4fe2af408a181ca45a80}
+\hypertarget{_xgraphics_8c_af933e6c732d7d7fddbc6b06be1139421}{\index{Xgraphics.\-c@{Xgraphics.\-c}!dessine\-Pas@{dessine\-Pas}}
+\index{dessine\-Pas@{dessine\-Pas}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{dessine\-Pas}]{\setlength{\rightskip}{0pt plus 5cm}int dessine\-Pas (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_af933e6c732d7d7fddbc6b06be1139421}
+Draw only if the camera can see it ,it seem to be usefull. \hypertarget{_xgraphics_8c_a5fceaf65330c97c3dbb1bd7f41cacb34}{\index{Xgraphics.\-c@{Xgraphics.\-c}!Key\-Hit@{Key\-Hit}}
+\index{Key\-Hit@{Key\-Hit}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{Key\-Hit}]{\setlength{\rightskip}{0pt plus 5cm}int Key\-Hit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a5fceaf65330c97c3dbb1bd7f41cacb34}
+\hypertarget{_xgraphics_8c_a0d05fa75dd55628afb68661beab3170f}{\index{Xgraphics.\-c@{Xgraphics.\-c}!lat\-\_\-to\-\_\-y@{lat\-\_\-to\-\_\-y}}
+\index{lat\-\_\-to\-\_\-y@{lat\-\_\-to\-\_\-y}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{lat\-\_\-to\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}double lat\-\_\-to\-\_\-y (
+\begin{DoxyParamCaption}
+\item[{double}]{lat}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a0d05fa75dd55628afb68661beab3170f}
+\hypertarget{_xgraphics_8c_a62bd9cd9f8002b0c2a5156c3bdd0428a}{\index{Xgraphics.\-c@{Xgraphics.\-c}!lon\-\_\-to\-\_\-x@{lon\-\_\-to\-\_\-x}}
+\index{lon\-\_\-to\-\_\-x@{lon\-\_\-to\-\_\-x}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{lon\-\_\-to\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}double lon\-\_\-to\-\_\-x (
+\begin{DoxyParamCaption}
+\item[{double}]{lon}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a62bd9cd9f8002b0c2a5156c3bdd0428a}
+\hypertarget{_xgraphics_8c_ab480b96aa233c17e4027c3b1d98c3960}{\index{Xgraphics.\-c@{Xgraphics.\-c}!order@{order}}
+\index{order@{order}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{order}]{\setlength{\rightskip}{0pt plus 5cm}void order (
+\begin{DoxyParamCaption}
+\item[{{\bf conteneur} $\ast$}]{chemins, }
+\item[{double}]{minla, }
+\item[{double}]{maxla, }
+\item[{double}]{minlo, }
+\item[{double}]{maxlo, }
+\item[{int}]{mode, }
+\item[{int}]{zo, }
+\item[{int}]{zo2, }
+\item[{int}]{zo3, }
+\item[{int}]{zo4, }
+\item[{int}]{angular, }
+\item[{int}]{ang, }
+\item[{int}]{theta}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_ab480b96aa233c17e4027c3b1d98c3960}
+\hypertarget{_xgraphics_8c_a4db1757380f2184331f76c8b581a4c6a}{\index{Xgraphics.\-c@{Xgraphics.\-c}!radians@{radians}}
+\index{radians@{radians}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{radians}]{\setlength{\rightskip}{0pt plus 5cm}double radians (
+\begin{DoxyParamCaption}
+\item[{double}]{degrees}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a4db1757380f2184331f76c8b581a4c6a}
+\hypertarget{_xgraphics_8c_a060e87ee10956b4e227b5947417b869d}{\index{Xgraphics.\-c@{Xgraphics.\-c}!rendu@{rendu}}
+\index{rendu@{rendu}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{rendu}]{\setlength{\rightskip}{0pt plus 5cm}void rendu (
+\begin{DoxyParamCaption}
+\item[{{\bf ways} $\ast$}]{chemins, }
+\item[{int}]{size, }
+\item[{double}]{minla, }
+\item[{double}]{maxla, }
+\item[{double}]{minlo, }
+\item[{double}]{maxlo}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a060e87ee10956b4e227b5947417b869d}
+\hypertarget{_xgraphics_8c_acecc85ef37f506121c8966aba65b56fe}{\index{Xgraphics.\-c@{Xgraphics.\-c}!rendu2@{rendu2}}
+\index{rendu2@{rendu2}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{rendu2}]{\setlength{\rightskip}{0pt plus 5cm}void rendu2 (
+\begin{DoxyParamCaption}
+\item[{{\bf conteneur} $\ast$}]{chemins, }
+\item[{int}]{size, }
+\item[{double}]{minla, }
+\item[{double}]{maxla, }
+\item[{double}]{minlo, }
+\item[{double}]{maxlo, }
+\item[{int}]{mode, }
+\item[{int}]{zo, }
+\item[{int}]{zo2, }
+\item[{int}]{zo3, }
+\item[{int}]{zo4, }
+\item[{int}]{angular, }
+\item[{int}]{ang, }
+\item[{int}]{theta, }
+\item[{{\bf colour} $\ast$}]{styl, }
+\item[{char $\ast$}]{fi}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_acecc85ef37f506121c8966aba65b56fe}
+\hypertarget{_xgraphics_8c_a0a77e339003d56bf0394fa455add5f43}{\index{Xgraphics.\-c@{Xgraphics.\-c}!rendu3@{rendu3}}
+\index{rendu3@{rendu3}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{rendu3}]{\setlength{\rightskip}{0pt plus 5cm}void rendu3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a0a77e339003d56bf0394fa455add5f43}
+\hypertarget{_xgraphics_8c_a39ab1f0ff2aa24a6ec6de7e8a1cb7e16}{\index{Xgraphics.\-c@{Xgraphics.\-c}!res@{res}}
+\index{res@{res}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{res}]{\setlength{\rightskip}{0pt plus 5cm}void res (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a39ab1f0ff2aa24a6ec6de7e8a1cb7e16}
+\hypertarget{_xgraphics_8c_a79044dde8305e7239e473a579f9039bc}{\index{Xgraphics.\-c@{Xgraphics.\-c}!res2@{res2}}
+\index{res2@{res2}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{res2}]{\setlength{\rightskip}{0pt plus 5cm}void res2 (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a79044dde8305e7239e473a579f9039bc}
+\hypertarget{_xgraphics_8c_a14b1682ee66aecb797e50ae1ac929189}{\index{Xgraphics.\-c@{Xgraphics.\-c}!update@{update}}
+\index{update@{update}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void update (
+\begin{DoxyParamCaption}
+\item[{double}]{minla, }
+\item[{double}]{maxla, }
+\item[{double}]{minlo, }
+\item[{double}]{maxlo}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a14b1682ee66aecb797e50ae1ac929189}
+\hypertarget{_xgraphics_8c_a36923af8efd56d6e07f49ed1219a28a3}{\index{Xgraphics.\-c@{Xgraphics.\-c}!zonage@{zonage}}
+\index{zonage@{zonage}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{zonage}]{\setlength{\rightskip}{0pt plus 5cm}void zonage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_xgraphics_8c_a36923af8efd56d6e07f49ed1219a28a3}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_xgraphics_8c_a99aba148640fe3a90089aeacf7a81d02}{\index{Xgraphics.\-c@{Xgraphics.\-c}!colar@{colar}}
+\index{colar@{colar}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{colar}]{\setlength{\rightskip}{0pt plus 5cm}int colar =70}}\label{_xgraphics_8c_a99aba148640fe3a90089aeacf7a81d02}
+\hypertarget{_xgraphics_8c_a1c8c3102d21fd30e2488af144d5aea63}{\index{Xgraphics.\-c@{Xgraphics.\-c}!couleur\-Noire@{couleur\-Noire}}
+\index{couleur\-Noire@{couleur\-Noire}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{couleur\-Noire}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Color couleur\-Noire = \{0, 0, 0\}}}\label{_xgraphics_8c_a1c8c3102d21fd30e2488af144d5aea63}
+\hypertarget{_xgraphics_8c_a2fe49047918f49e9b48a6b33dea20143}{\index{Xgraphics.\-c@{Xgraphics.\-c}!drawing@{drawing}}
+\index{drawing@{drawing}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{drawing}]{\setlength{\rightskip}{0pt plus 5cm}int drawing = 0}}\label{_xgraphics_8c_a2fe49047918f49e9b48a6b33dea20143}
+\hypertarget{_xgraphics_8c_ac8b5d58621d004cb42a95114842efdc7}{\index{Xgraphics.\-c@{Xgraphics.\-c}!list@{list}}
+\index{list@{list}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cercle}$\ast$ list}}\label{_xgraphics_8c_ac8b5d58621d004cb42a95114842efdc7}
+\hypertarget{_xgraphics_8c_a50666afddc588c2063b2ca4f614215f3}{\index{Xgraphics.\-c@{Xgraphics.\-c}!listsize@{listsize}}
+\index{listsize@{listsize}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{listsize}]{\setlength{\rightskip}{0pt plus 5cm}int listsize}}\label{_xgraphics_8c_a50666afddc588c2063b2ca4f614215f3}
+\hypertarget{_xgraphics_8c_a9aabd3f4f5591c3aaa01b427abb2199b}{\index{Xgraphics.\-c@{Xgraphics.\-c}!mer@{mer}}
+\index{mer@{mer}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{mer}]{\setlength{\rightskip}{0pt plus 5cm}int mer =0}}\label{_xgraphics_8c_a9aabd3f4f5591c3aaa01b427abb2199b}
+\hypertarget{_xgraphics_8c_a96613d07df4205a377ad9cb38b3a9d27}{\index{Xgraphics.\-c@{Xgraphics.\-c}!option@{option}}
+\index{option@{option}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{option}]{\setlength{\rightskip}{0pt plus 5cm}int option =0}}\label{_xgraphics_8c_a96613d07df4205a377ad9cb38b3a9d27}
+\hypertarget{_xgraphics_8c_a49a11b0728728090fa1189391c9fe0c8}{\index{Xgraphics.\-c@{Xgraphics.\-c}!police@{police}}
+\index{police@{police}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{police}]{\setlength{\rightskip}{0pt plus 5cm}T\-T\-F\-\_\-\-Font$\ast$ police =N\-U\-L\-L}}\label{_xgraphics_8c_a49a11b0728728090fa1189391c9fe0c8}
+\hypertarget{_xgraphics_8c_a78fa3957d73de49cb81d047857504218}{\index{Xgraphics.\-c@{Xgraphics.\-c}!screen@{screen}}
+\index{screen@{screen}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{screen}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Surface$\ast$ screen}}\label{_xgraphics_8c_a78fa3957d73de49cb81d047857504218}
+\hypertarget{_xgraphics_8c_a41f478d89edd900e099da6750dc8df1d}{\index{Xgraphics.\-c@{Xgraphics.\-c}!screen2@{screen2}}
+\index{screen2@{screen2}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{screen2}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Surface$\ast$ screen2}}\label{_xgraphics_8c_a41f478d89edd900e099da6750dc8df1d}
+\hypertarget{_xgraphics_8c_a52219a465335ec8c82398faae6e52e2a}{\index{Xgraphics.\-c@{Xgraphics.\-c}!style@{style}}
+\index{style@{style}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{style}]{\setlength{\rightskip}{0pt plus 5cm}{\bf colour}$\ast$ style}}\label{_xgraphics_8c_a52219a465335ec8c82398faae6e52e2a}
+\hypertarget{_xgraphics_8c_ab4ce808a221afc3eef9058a4ee857af3}{\index{Xgraphics.\-c@{Xgraphics.\-c}!taillex@{taillex}}
+\index{taillex@{taillex}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{taillex}]{\setlength{\rightskip}{0pt plus 5cm}int taillex =1000}}\label{_xgraphics_8c_ab4ce808a221afc3eef9058a4ee857af3}
+\hypertarget{_xgraphics_8c_a61c9b88f8251dcf5e6dc2673122259c1}{\index{Xgraphics.\-c@{Xgraphics.\-c}!tailley@{tailley}}
+\index{tailley@{tailley}!Xgraphics.c@{Xgraphics.\-c}}
+\subsubsection[{tailley}]{\setlength{\rightskip}{0pt plus 5cm}int tailley =700}}\label{_xgraphics_8c_a61c9b88f8251dcf5e6dc2673122259c1}

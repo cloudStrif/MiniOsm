@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mini OSM</title>
+    
+  </head>
+  
+  <body>
+  
+    <center><h1><img src="logo.jpg" alt="Notre jeu en SVG" /></h1></center>
+    <section id="article15" class="crayon article-css-15 demoTime">
+                            <div class="menu">
+          <ul>
+        <li><a href="index.html">Home</a><div><h3>Home</h3><p>Page d'accueil </p></div></li>
+        <li><a href="new.html">Fonctions</a><div><h3>Notices</h3><p>L</p></div></li>
+        <li><a href="produit.html">Documentation</a><div><h3>Documentation</h3><p>Visualiser tous les produits</p></div></li>
+       
+        <li><a href="connection.html">SVG</a><div><h3>Des images</h3><p>Des screens</p></div></li>
+        
+        </ul>
+    
+        </div>
+       
+        <h2>
+        Lire le README.md /!\
+	Au démmarage, GoldenSun Map theme song se lance.
+         </br> </br>
+        Pour compiler le programme faire la commande make (dans source)L'option -p dessine mieux. </br>
+        ensuite pour exécuter ./projet map.osm :  </br> </br>
+        Vous pouvez vous déplacer et zoomer sur la map :  </br>
+      -Les touches /!\ :QSDZ pour se deplacer.
+ "fleche haut"= zoom avant " fleche bas"=zoom arrière "fleche droite"=inclinaison "fleche gauche"=declinaison "o"=centrage de map (si perdu dans la map)
+"p"=debut d'affichage des balises names   "m"= ne plus afficher les balises names. b=inverser n=deverser
+ </br> </br>
+Pour fermer le programme appuyez sur ECHAP -> une image au format BMP se crée automatiquement :sortie.bmp 
+ </br> </br>
+ ./projet map.osm --svg  permet de créer une image au format SVG. Faire make svg avant chaque usage /!\ </br> </br>
+ Dans style/style.xml on a la possibilité de changer les couleurs en changant les couleurs RGBA </br> </br>
+ Si une map est trop grande, préférez l'option : ./projet map.osm --zoom  car elle zoom et se déplace sur le BMP crée. </br> </br>
+ L'api overpass permet de générer puis afficher une map à l'aide des valeurs de bounds /.projet 2.36589 48.85280 2.36924  48.85410  </br> </br>
+ ./projet map.osm --past génère une map façon carte au trésor (les calculs sont fait de sorte à ce que la terre soit plate) </br> </br>
+ ./projet map.osm --futur simule la map version futur.
+  </br> </br>
+  Une Api permettra de donner la météo (seulement dans le terminal).
+  Nous utilisons une Api gratuite, celle-ci ne fonctionne malheureusement que sur Paris.
+  </br></br>
+  
+ <img src="../../utils/extern/g.png" alt="GSOC" />
+  Pour s'entraîner à la tâche future du Google summer of code : 
+  implémentation d'un systeme d'enregistrement des actions. Le but serai de pouvoir utiliser un format vidéo
+  réutilisable avec d'autre soft ....
+  commandes : -- recording 
+  et --play 
+  par exemple: ./projet map.osm --recording test.rec
+  ./projet map.osm --play test.rec
+        
+        </h2>
+                      </section>
+  
+  </body>
+  
+</html>

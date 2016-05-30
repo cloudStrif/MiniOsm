@@ -1,0 +1,14 @@
+======recording=======
+======================
+Training for Google Summer Of Code 
+
+We can now recording and play as a video
+thanks to the command 
+--recodring name 
+
+and play with 
+--play name 
+
+feature: 
+basicly the speed of action is 100 ms.Probably we will change the format into an xml file ..
+

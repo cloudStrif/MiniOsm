@@ -1,0 +1,145 @@
+\hypertarget{_draw_sdl1_8c}{\section{sources/\-Draw\-Sdl1.c File Reference}
+\label{_draw_sdl1_8c}\index{sources/\-Draw\-Sdl1.\-c@{sources/\-Draw\-Sdl1.\-c}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L.\-h$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L\-\_\-image.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L\-\_\-ttf.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L\-\_\-gfx\-Primitives.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Draw\-Sdl1.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Xgraphics.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structword}{word}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_draw_sdl1_8c_a984b8f4bc260017c6fb3ce2e0229d612}{taillex}~1200
+\item 
+\#define \hyperlink{_draw_sdl1_8c_ac9a070bfc4ed8b24c5b1cc778e926784}{tailley}~800
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structword}{word} \hyperlink{_draw_sdl1_8c_a564a2db84ea6aa0ef9493bdd14db6096}{word}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_draw_sdl1_8c_abf062b96c49c530f097c30de5c044646}{pause2} ()
+\item 
+void \hyperlink{_draw_sdl1_8c_a75b62958e2b89a2f0ec2b7c721128fa6}{putpixel} (int xe, int ye, Uint32 c)
+\item 
+Uint32 \hyperlink{_draw_sdl1_8c_ad643a63c69dbfe6f953041d5b053ee63}{getpixel} (int xe, int ye)
+\item 
+void \hyperlink{_draw_sdl1_8c_a2fc6ff4016c82df6a555718d9bcbffc1}{line} (int x0, int y0, int x1, int y1, Uint32 c)
+\item 
+void \hyperlink{_draw_sdl1_8c_a873ff1fbab38abb719cd510b2807a607}{linewithwidth} (int x1, int y1, int x2, int y2, int width, Uint32 c)
+\item 
+void \hyperlink{_draw_sdl1_8c_abc27b525d563a58027e2fb82d673370f}{floodfill} (int x, int y, Uint32 cr, Uint32 cb)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\-D\-L\-\_\-\-Surface $\ast$ \hyperlink{_draw_sdl1_8c_a78fa3957d73de49cb81d047857504218}{screen}
+\item 
+Uint32 \hyperlink{_draw_sdl1_8c_a5064e6b0b6c9947ac5302ac05a963b5f}{white}
+\item 
+Uint32 \hyperlink{_draw_sdl1_8c_aed05400b0aac6ef39523ffc1ba4ad7f6}{black}
+\item 
+Uint32 \hyperlink{_draw_sdl1_8c_acae041acbfee216f613962dedddb86e2}{couleur} \mbox{[}100\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_draw_sdl1_8c_a984b8f4bc260017c6fb3ce2e0229d612}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!taillex@{taillex}}
+\index{taillex@{taillex}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{taillex}]{\setlength{\rightskip}{0pt plus 5cm}\#define taillex~1200}}\label{_draw_sdl1_8c_a984b8f4bc260017c6fb3ce2e0229d612}
+\hypertarget{_draw_sdl1_8c_ac9a070bfc4ed8b24c5b1cc778e926784}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!tailley@{tailley}}
+\index{tailley@{tailley}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{tailley}]{\setlength{\rightskip}{0pt plus 5cm}\#define tailley~800}}\label{_draw_sdl1_8c_ac9a070bfc4ed8b24c5b1cc778e926784}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_draw_sdl1_8c_a564a2db84ea6aa0ef9493bdd14db6096}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!word@{word}}
+\index{word@{word}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{word}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf word} {\bf word}}}\label{_draw_sdl1_8c_a564a2db84ea6aa0ef9493bdd14db6096}
+
+
+\subsection{Function Documentation}
+\hypertarget{_draw_sdl1_8c_abc27b525d563a58027e2fb82d673370f}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!floodfill@{floodfill}}
+\index{floodfill@{floodfill}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{floodfill}]{\setlength{\rightskip}{0pt plus 5cm}void floodfill (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{Uint32}]{cr, }
+\item[{Uint32}]{cb}
+\end{DoxyParamCaption}
+)}}\label{_draw_sdl1_8c_abc27b525d563a58027e2fb82d673370f}
+Floodfill methode de coloriage \hypertarget{_draw_sdl1_8c_ad643a63c69dbfe6f953041d5b053ee63}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!getpixel@{getpixel}}
+\index{getpixel@{getpixel}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{getpixel}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 getpixel (
+\begin{DoxyParamCaption}
+\item[{int}]{xe, }
+\item[{int}]{ye}
+\end{DoxyParamCaption}
+)}}\label{_draw_sdl1_8c_ad643a63c69dbfe6f953041d5b053ee63}
+\hypertarget{_draw_sdl1_8c_a2fc6ff4016c82df6a555718d9bcbffc1}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!line@{line}}
+\index{line@{line}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}void line (
+\begin{DoxyParamCaption}
+\item[{int}]{x0, }
+\item[{int}]{y0, }
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{Uint32}]{c}
+\end{DoxyParamCaption}
+)}}\label{_draw_sdl1_8c_a2fc6ff4016c82df6a555718d9bcbffc1}
+Trace une simple Ligne droite \hypertarget{_draw_sdl1_8c_a873ff1fbab38abb719cd510b2807a607}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!linewithwidth@{linewithwidth}}
+\index{linewithwidth@{linewithwidth}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{linewithwidth}]{\setlength{\rightskip}{0pt plus 5cm}void linewithwidth (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{int}]{width, }
+\item[{Uint32}]{c}
+\end{DoxyParamCaption}
+)}}\label{_draw_sdl1_8c_a873ff1fbab38abb719cd510b2807a607}
+Methode permettant le gras (utilise maintenant des fonctions de G\-X qui permet des traits droits \hypertarget{_draw_sdl1_8c_abf062b96c49c530f097c30de5c044646}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!pause2@{pause2}}
+\index{pause2@{pause2}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{pause2}]{\setlength{\rightskip}{0pt plus 5cm}void pause2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_draw_sdl1_8c_abf062b96c49c530f097c30de5c044646}
+\hypertarget{_draw_sdl1_8c_a75b62958e2b89a2f0ec2b7c721128fa6}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!putpixel@{putpixel}}
+\index{putpixel@{putpixel}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{putpixel}]{\setlength{\rightskip}{0pt plus 5cm}void putpixel (
+\begin{DoxyParamCaption}
+\item[{int}]{xe, }
+\item[{int}]{ye, }
+\item[{Uint32}]{c}
+\end{DoxyParamCaption}
+)}}\label{_draw_sdl1_8c_a75b62958e2b89a2f0ec2b7c721128fa6}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_draw_sdl1_8c_aed05400b0aac6ef39523ffc1ba4ad7f6}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!black@{black}}
+\index{black@{black}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{black}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 black}}\label{_draw_sdl1_8c_aed05400b0aac6ef39523ffc1ba4ad7f6}
+\hypertarget{_draw_sdl1_8c_acae041acbfee216f613962dedddb86e2}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!couleur@{couleur}}
+\index{couleur@{couleur}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{couleur}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 couleur\mbox{[}100\mbox{]}}}\label{_draw_sdl1_8c_acae041acbfee216f613962dedddb86e2}
+\hypertarget{_draw_sdl1_8c_a78fa3957d73de49cb81d047857504218}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!screen@{screen}}
+\index{screen@{screen}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{screen}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Surface$\ast$ screen}}\label{_draw_sdl1_8c_a78fa3957d73de49cb81d047857504218}
+Fonctions de bases permettant le dessin sans passer par sdl\-\_\-\-G\-F\-X +fonction qui permet le gras(recalcul) \hypertarget{_draw_sdl1_8c_a5064e6b0b6c9947ac5302ac05a963b5f}{\index{Draw\-Sdl1.\-c@{Draw\-Sdl1.\-c}!white@{white}}
+\index{white@{white}!DrawSdl1.c@{Draw\-Sdl1.\-c}}
+\subsubsection[{white}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 white}}\label{_draw_sdl1_8c_a5064e6b0b6c9947ac5302ac05a963b5f}

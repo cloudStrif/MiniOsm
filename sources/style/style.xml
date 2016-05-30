@@ -1,0 +1,54 @@
+<style>
+  
+  <landuse r="10" g="160" b="15" a="60" >
+  <allottments r="167" g="103" b="38" a="60"  />
+  <basin r="38" g="196" b="236" a="60"  />
+  <brownfield r="104" g="94" b="67" a="60"  />
+  <cemetery r="127" g="221" b="76" a="60"  />
+  <commercial r="255" g="0" b="236" a="60"  />
+  <construction r="100" g="155" b="136" a="60"  />
+  </landuse>
+  
+  <leisure r="10" g="160" b="15" a="60"  />
+  
+  <building r="141" g="182" b="205" a="155"  >
+   <yes r="153" g="122" b="144" a="150" />
+    <school r="10" g="130" b="120" a="150" />
+    <hotel r="10" g="130" b="15" a="150"/>
+    <church r="10" g="70" b="70" a="150" />
+  </building>
+
+  <natural r="70" g="70" b="70" a="255" >
+    <water  r="14" g="12" b="205" a="155"/>
+    <wood r="127" g="221" b="76" a="155"  />
+    <heath r="152" g="87" b="23" a="155"  />
+    <fell r="237" g="127" b="16" a="155"  />
+     <bare_rock r="128" g="0" b="128" a="155"  />
+      <scree r="204" g="78" b="92" a="155"  />
+       <shingle r="152" g="87" b="23" a="155"  />
+        <sand r="23" g="12" b="16" a="155"  />
+         <beach r="237" g="127" b="16" a="155"  />
+         <cliff r="27" g="17" b="16" a="155"  />
+          <land r="37" g="107" b="160" a="155"  />
+  </natural>
+ 
+ <place r="255" g="111" b="125" a="155"  />
+ 
+  <waterway  r="44" g="117" b="255" a="155" >
+    <riverbank  r="44" g="80" b="255" a="155"/>
+  </waterway>
+  
+  <highway r="2"  g="111" b="125" a="155" >
+  <motorway r="3"  g="111" b="125" a="155"  />
+   <trunk r="1"  g="111" b="125" a="155"  />
+    <primary r="6"  g="255" b="125" a="155"  />
+       <secondary r="5"  g="111" b="125" a="155"  />
+        <residential r="2"  g="200" b="200" a="155"  />
+         <unclassfied r="2"  g="111" b="125" a="155"  />
+         <tertiary  r="2"  g="200" b="200" a="155"  />
+         <footway  r="2"  g="200" b="125" a="155"  />
+         <steps r="2"  g="200" b="200" a="155"  />
+  </highway>
+  
+ 
+</style>

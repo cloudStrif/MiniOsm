@@ -1,0 +1,43 @@
+\section*{C\-P\-R\-O\-J}
+
+{\itshape projet de renderer consistant a analyser des donnees de openstreetmap pour en faire un rendu graphique en language C utilisant S\-D\-L et Libxml2}
+
+
+
+-\/\-Mini\-O\-S\-M a maintenant un site web ! A l'adresse \-: \href{http://cloudstrif.github.io/}{\tt http\-://cloudstrif.\-github.\-io/}
+
+-\/\-La compilation se fait avec -\/\-Wall
+
+-\/\-Une presentation dans /source/site\-Web/index.html
+
+-\/\-Le programme a plusieurs options mais sans argument, il lance le produit final.
+
+-\/\-Les touches /!\textbackslash{} \-:Q\-S\-D\-Z pour se deplacer. \char`\"{}fleche haut\char`\"{}= zoom avant \char`\"{} fleche bas\char`\"{}=zoom arrière \char`\"{}fleche droite\char`\"{}=inclinaison \char`\"{}fleche gauche\char`\"{}=declinaison \char`\"{}o\char`\"{}=centrage de map (si perdu dans la map) \char`\"{}p\char`\"{}=debut d'affichage des balises names \char`\"{}m\char`\"{}= ne plus afficher les balises names. b=inverser n=deverser
+
+-\/\-L'option --zoom permet de se déplacer dans la map et on peut zoomer en appuyant sur la touche a ou z pour le dezoom Les flèches permettent de bouger dans la map (A U\-T\-I\-L\-I\-S\-E\-R L\-O\-R\-S\-Q\-U\-E L\-A M\-A\-P E\-S\-T T\-R\-O\-P G\-R\-A\-N\-D\-E (manuellement pour le moment)
+
+-\/(A\-P\-I O\-V\-E\-R\-P\-A\-S\-S)vous pouvez placer 4 arguments (attributs de $<$bounds$>$) et cela trace la map.
+
+-\/\-A chaque fin de programme, celui-\/ci génère un fichier sortie.\-bmp.
+
+-\/style.\-xml est un fichier qui permet de changer les couleurs des balises grace au systeme R\-G\-B\-A
+
+-\/l'option --svg génère un fichier dessin.\-svg.\-Faire make svg à chaque fois que vous voulez le faire /!\textbackslash{}
+
+-\/l'option --recording name permet d'enregistrer une video des déplacements divers effectués
+
+-\/l'option --play name permt de jouer ce que vous avez enregistré via la commande recording.
+
+-\/l'option --search permet de localiser un lieux \-: ./projet ../utils/examples/12\-\_\-paris\-\_\-pitie\-\_\-salpetriere.osm \char`\"{}\-Place Louis Armstrong\char`\"{} --search
+
+
+
+-\/\-L'option -\/past trace une map façon carte au trésor , les calculs ont ete effectués de sorte à ce que la terre soit plate\-: 
+
+-\/\-L'option -\/present est un rendu utilisant les projections car la terre est sphérique\-: 
+
+L'option -\/futur (lourd..) donne une vue en perspective de la carte\-: 
+
+Paris one day ..... 
+
+-\/make meteo génère meteo , puis ./meteo lat lon -\/$>$ affiche la météo dans le terminal 

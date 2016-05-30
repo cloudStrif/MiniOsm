@@ -1,0 +1,64 @@
+Installation SDL : 
+https://doc.ubuntu-fr.org/sdl
+(installer SDL_ttf aussi et peut etre SDL_image ...)
++SDL_gfx 
+
+Installation libxml2 :
+http://www.xmlsoft.org/FAQ.html
+penser a regler les parametres(CFLAGS ect)
+sudo apt-get install xml2
+sudo apt-get install libxml2-dev 
+xml2-config --cflags
+xml2-config --libs
+CFLAGS=`xml2-config --cflags`
+LIBS=`xml2-config --libs`
+gcc  -o test test.c `xml2-config --cflags --libs`
+
+
+
+
+/!\ : Pour executer un programme utilisant SDL
+et libxml2 sous Linux on a la commande :
+
+gcc -o projet *.c *.h `xml2-config --cflags --libs` `sdl-config --cflags --libs` -lSDLmain -lSDL_ttf -lSDL_gfx -lSDL_mixer -lm
+
+
+gcc f.c `pkg-config --cflags --libs glib-2.0`
+
+gcc ccm.c -o ccm -lcurl
+
+
+===Memo libxml2===
+les fonctions importantes :
+
+xmlDocPtr doc; //va permettre le parsing
+doc = xmlParseFile(docname); //parsing d'un xml (ou .osm)
+xmlNodePtr cur; //est un noeud dans l'arbre xml
+cur = xmlDocGetRootElement(doc); //a mettre au tout debut (root)
+
+cur = cur->xmlChildrenNode; //a mettre quand on entre dans un nouveau branche de l'arbre xml
+cur=cur->next; //suivant ATTENTION a l'attribut text
+cur=cur->prev ; //precedent
+cur=cur->parent ;//remonté au parent
+
+ key = xmlNodeListGetString(doc, cur->xmlChildrenNode, 1);//recupere l'element entre la balise ,servira pour nous a savoir si il y a un <tag> ou autre choses ...
+
+======quelques notes sur le rendu graphique ========
+====================================================
+screen.jpg -> nous donne une idée de comment on va structurer la fenetre de notre programme ,
+notons que a notre echelle il va faloir travailler dans les dixiemes ,voir les centiemes ...
+
+Explication de la V1 : on utilise pas de projection pour cette version , un simple recadrage avec la fenetre
+nous donnes le resultat voulu.
+la terre n'ettant pas plate , lorsque nous visualisons les bords des continents (utils/rendererV1/didel4.bmp) l'image est moche
+mais lorsque nous visualisons des batiments (lignes droites )simple ,c'est satisfaisant.
+
+===A venir (incertain)====
+Utilisation de SDL_gtf -> car nos fonctions ne gerent pas le cas des figures croisés pour le coloriage (flood fill).
+mis en place d'une fonction de conversion en Mercato.
+
+
+==sdlgfx===
+Attention , peux provoquer des core dump ,ce qui explique l'architecture du code pour le moment
+une structure plus simple a mener a core dump ...
+

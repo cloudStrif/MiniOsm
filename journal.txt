@@ -1,0 +1,58 @@
+(Ancien)
+Pour la semaine:
+
+-Lecture et comprehension du projet 
+-Installation des librairies nescessaires (SDL et Libxml2)
+-Configuration de libxml2 pour la compilation et l'execution
+-Approfondissement des connaissances en libxml2 et SDL.
+
+-Mise a jour de l'architecture du programme pour le projet.
+-reflechir a comment gerer les cas ,au niveau des conteneurs de données.
+
+===================================================================================
+
+
+mise a jour :
+-Nous ne ferons finallement pas de fonction polygone puisque a priorie 
+grace a la fonction drawLine et des informations des balises <way> nous
+n'avons pas besoin de créer une fonction simplement il faudra voir si le parametre est building.
+
+-mis en place d'un shema Version 1 de comment va fonctionner le programme(cf shema)
+
+-Nous avons remarqué que dans tous les exemples et d'autres exemple qu'on a fait nous meme
+de fichier .osm de openstreetMap ,les noeuds ne depassaient pas 8000(seulements les 5 exemples de didel) , nous ferons donc
+dans un premier temps avec des tableaux(largement suffisant pour le moment).
+fonctionne pour le moment.
+
+-mise en place de fonctions graphiques a usage simple.(SDL)
+
+-> amelioration du rendu 
+->reorganisation du code 
+->option utilisant l'api OSM
+
+Au final .....
+MiniOsm est une commande Linux.
+
+-Affichage du renderer (avec ordre d'affichage)on y vois beaucoup de details.
+-Affichage des fleuves et des mers.
+-Fichier Style qui permet de changer les couleurs du renderer
+-Les dimensions de l'images sont conservés (ou plutot calculé de sorte a ce que cela affiche bien)
+-Affichage des rues (comme dans un jeu + adapatation par le zoom) et affichage des batiments(names)
+-Nous utilisons une convertion Mercator arrangé pour l'affichage.
+-Possibilité de zoom et dezoom , deplacement et 3D sur map 2D 2 degres de libertés.
+-recherche local (mis en evidence par un cercle)
+-export en BMP et export en SVG 
+-Utilisation ApiOverpass (4 points ou Point du milieu)
+-requetes (dans le language QL possible 
+-pendant le zoom et deplacement on affiche petit a petit
+
+-Possibilité d'enregistrer des mouvements et de les rejouer via le programme.
+-Mini Api Meteo qui permet de predire la meteo de Paris pour les 7 prochains jours.
+
+
+
+
+
+
+
+

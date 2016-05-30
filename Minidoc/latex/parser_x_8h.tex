@@ -1,0 +1,149 @@
+\hypertarget{parser_x_8h}{\section{sources/parser\-X.h File Reference}
+\label{parser_x_8h}\index{sources/parser\-X.\-h@{sources/parser\-X.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$libxml/xmlmemory.\-h$>$}\\*
+{\ttfamily \#include $<$libxml/parser.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L\-\_\-gfx\-Primitives.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L\-\_\-mixer.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L/\-S\-D\-L\-\_\-rotozoom.\-h$>$}\\*
+{\ttfamily \#include $<$glib.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtag}{tag}
+\item 
+struct \hyperlink{structnoeud}{noeud}
+\item 
+struct \hyperlink{structways}{ways}
+\item 
+struct \hyperlink{structconteneur}{conteneur}
+\item 
+struct \hyperlink{structrelation}{relation}
+\item 
+struct \hyperlink{structstruct__process}{struct\-\_\-process}
+\item 
+struct \hyperlink{structstruct__process2}{struct\-\_\-process2}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structtag}{tag} \hyperlink{parser_x_8h_aa055ee7c4a368dfd22d850f905d3501c}{tag}
+\item 
+typedef struct \hyperlink{structnoeud}{noeud} \hyperlink{parser_x_8h_a23a591b87421332275c57bbc0bd88c83}{noeud}
+\item 
+typedef struct \hyperlink{structways}{ways} \hyperlink{parser_x_8h_a6ef8e2f5fc51afc2294f6b5d41fa755f}{ways}
+\item 
+typedef struct \hyperlink{structconteneur}{conteneur} \hyperlink{parser_x_8h_a104b15ddee9be33fec8bbcb576b0479a}{conteneur}
+\item 
+typedef struct \hyperlink{structrelation}{relation} \hyperlink{parser_x_8h_a360741b4a1ea8e83cc857fdaacb07b17}{relation}
+\item 
+typedef struct \hyperlink{structstruct__process}{struct\-\_\-process} \hyperlink{parser_x_8h_aabe2255d94824a6fbe963a814ee388a5}{struct\-\_\-process}
+\item 
+typedef struct \hyperlink{structstruct__process}{struct\-\_\-process} \hyperlink{parser_x_8h_a781a0e91acf18af49404cb5a7ea76014}{Process}
+\item 
+typedef struct \hyperlink{structstruct__process2}{struct\-\_\-process2} \hyperlink{parser_x_8h_a18074493d34f1e97c6d2652cd0b7ac2d}{struct\-\_\-process2}
+\item 
+typedef struct \hyperlink{structstruct__process2}{struct\-\_\-process2} \hyperlink{parser_x_8h_ad657f592d55053ee8b65da5311f78a10}{Process2}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{parser_x_8h_a967ad971fa982136fe1ac53f615a7cdb}{nbelement} (xml\-Node\-Ptr cur, const xml\-Char $\ast$str)
+\begin{DoxyCompactList}\small\item\em count the number of elements \end{DoxyCompactList}\item 
+\hyperlink{structnoeud}{noeud} \hyperlink{parser_x_8h_a3468bebb87e3cc3bf41863a9174e0738}{ref\-Noeud} (\hyperlink{structnoeud}{noeud} $\ast$nodeu, int n, long ref)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\-D\-L\-\_\-\-Surface $\ast$ \hyperlink{parser_x_8h_a78fa3957d73de49cb81d047857504218}{screen}
+\item 
+Uint32 \hyperlink{parser_x_8h_a5064e6b0b6c9947ac5302ac05a963b5f}{white}
+\item 
+Uint32 \hyperlink{parser_x_8h_aed05400b0aac6ef39523ffc1ba4ad7f6}{black}
+\item 
+Uint32 \hyperlink{parser_x_8h_acae041acbfee216f613962dedddb86e2}{couleur} \mbox{[}100\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{parser_x_8h_a104b15ddee9be33fec8bbcb576b0479a}{\index{parser\-X.\-h@{parser\-X.\-h}!conteneur@{conteneur}}
+\index{conteneur@{conteneur}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{conteneur}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf conteneur} {\bf conteneur}}}\label{parser_x_8h_a104b15ddee9be33fec8bbcb576b0479a}
+\hypertarget{parser_x_8h_a23a591b87421332275c57bbc0bd88c83}{\index{parser\-X.\-h@{parser\-X.\-h}!noeud@{noeud}}
+\index{noeud@{noeud}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{noeud}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf noeud} {\bf noeud}}}\label{parser_x_8h_a23a591b87421332275c57bbc0bd88c83}
+\hypertarget{parser_x_8h_a781a0e91acf18af49404cb5a7ea76014}{\index{parser\-X.\-h@{parser\-X.\-h}!Process@{Process}}
+\index{Process@{Process}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{Process}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf struct\-\_\-process} {\bf Process}}}\label{parser_x_8h_a781a0e91acf18af49404cb5a7ea76014}
+\hypertarget{parser_x_8h_ad657f592d55053ee8b65da5311f78a10}{\index{parser\-X.\-h@{parser\-X.\-h}!Process2@{Process2}}
+\index{Process2@{Process2}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{Process2}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf struct\-\_\-process2} {\bf Process2}}}\label{parser_x_8h_ad657f592d55053ee8b65da5311f78a10}
+\hypertarget{parser_x_8h_a360741b4a1ea8e83cc857fdaacb07b17}{\index{parser\-X.\-h@{parser\-X.\-h}!relation@{relation}}
+\index{relation@{relation}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{relation}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf relation} {\bf relation}}}\label{parser_x_8h_a360741b4a1ea8e83cc857fdaacb07b17}
+\hypertarget{parser_x_8h_aabe2255d94824a6fbe963a814ee388a5}{\index{parser\-X.\-h@{parser\-X.\-h}!struct\-\_\-process@{struct\-\_\-process}}
+\index{struct\-\_\-process@{struct\-\_\-process}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{struct\-\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf struct\-\_\-process} {\bf struct\-\_\-process}}}\label{parser_x_8h_aabe2255d94824a6fbe963a814ee388a5}
+\hypertarget{parser_x_8h_a18074493d34f1e97c6d2652cd0b7ac2d}{\index{parser\-X.\-h@{parser\-X.\-h}!struct\-\_\-process2@{struct\-\_\-process2}}
+\index{struct\-\_\-process2@{struct\-\_\-process2}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{struct\-\_\-process2}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf struct\-\_\-process2} {\bf struct\-\_\-process2}}}\label{parser_x_8h_a18074493d34f1e97c6d2652cd0b7ac2d}
+\hypertarget{parser_x_8h_aa055ee7c4a368dfd22d850f905d3501c}{\index{parser\-X.\-h@{parser\-X.\-h}!tag@{tag}}
+\index{tag@{tag}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{tag}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag} {\bf tag}}}\label{parser_x_8h_aa055ee7c4a368dfd22d850f905d3501c}
+\hypertarget{parser_x_8h_a6ef8e2f5fc51afc2294f6b5d41fa755f}{\index{parser\-X.\-h@{parser\-X.\-h}!ways@{ways}}
+\index{ways@{ways}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{ways}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ways} {\bf ways}}}\label{parser_x_8h_a6ef8e2f5fc51afc2294f6b5d41fa755f}
+
+
+\subsection{Function Documentation}
+\hypertarget{parser_x_8h_a967ad971fa982136fe1ac53f615a7cdb}{\index{parser\-X.\-h@{parser\-X.\-h}!nbelement@{nbelement}}
+\index{nbelement@{nbelement}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{nbelement}]{\setlength{\rightskip}{0pt plus 5cm}int nbelement (
+\begin{DoxyParamCaption}
+\item[{xml\-Node\-Ptr}]{cur, }
+\item[{const xml\-Char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{parser_x_8h_a967ad971fa982136fe1ac53f615a7cdb}
+
+
+count the number of elements 
+
+linear count
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur} & is a node \\
+\hline
+{\em str} & the name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un error, à valeur -\/1 si le disque n'existe pas, 0 sinon. 
+\end{DoxyReturn}
+\hypertarget{parser_x_8h_a3468bebb87e3cc3bf41863a9174e0738}{\index{parser\-X.\-h@{parser\-X.\-h}!ref\-Noeud@{ref\-Noeud}}
+\index{ref\-Noeud@{ref\-Noeud}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{ref\-Noeud}]{\setlength{\rightskip}{0pt plus 5cm}{\bf noeud} ref\-Noeud (
+\begin{DoxyParamCaption}
+\item[{{\bf noeud} $\ast$}]{nodeu, }
+\item[{int}]{n, }
+\item[{long}]{ref}
+\end{DoxyParamCaption}
+)}}\label{parser_x_8h_a3468bebb87e3cc3bf41863a9174e0738}
+old fonction finding nodes 
+
+\subsection{Variable Documentation}
+\hypertarget{parser_x_8h_aed05400b0aac6ef39523ffc1ba4ad7f6}{\index{parser\-X.\-h@{parser\-X.\-h}!black@{black}}
+\index{black@{black}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{black}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 black}}\label{parser_x_8h_aed05400b0aac6ef39523ffc1ba4ad7f6}
+\hypertarget{parser_x_8h_acae041acbfee216f613962dedddb86e2}{\index{parser\-X.\-h@{parser\-X.\-h}!couleur@{couleur}}
+\index{couleur@{couleur}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{couleur}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 couleur\mbox{[}100\mbox{]}}}\label{parser_x_8h_acae041acbfee216f613962dedddb86e2}
+\hypertarget{parser_x_8h_a78fa3957d73de49cb81d047857504218}{\index{parser\-X.\-h@{parser\-X.\-h}!screen@{screen}}
+\index{screen@{screen}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{screen}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Surface$\ast$ screen}}\label{parser_x_8h_a78fa3957d73de49cb81d047857504218}
+\hypertarget{parser_x_8h_a5064e6b0b6c9947ac5302ac05a963b5f}{\index{parser\-X.\-h@{parser\-X.\-h}!white@{white}}
+\index{white@{white}!parserX.h@{parser\-X.\-h}}
+\subsubsection[{white}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 white}}\label{parser_x_8h_a5064e6b0b6c9947ac5302ac05a963b5f}

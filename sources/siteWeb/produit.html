@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mini OSM</title>
+    
+  </head>
+  
+  <body>
+  
+    <center><h1><img src="logo.jpg" alt="Notre jeu en SVG" /></h1></center>
+    <section id="article15" class="crayon article-css-15 demoTime">
+                            <div class="menu">
+          <ul>
+        <li><a href="index.html">Home</a><div><h3>Home</h3><p>Page d'accueil </p></div></li>
+        <li><a href="new.html">Fonctions</a><div><h3>Notices</h3><p>L</p></div></li>
+        <li><a href="produit.html">Documentation</a><div><h3>Documentation</h3><p>Visualiser tous les produits</p></div></li>
+       
+        <li><a href="connection.html">SVG</a><div><h3>Des images</h3><p>Des screens</p></div></li>
+        
+        </ul>
+        </div>
+                      </section>
+    
+        <table>
+   <caption>Documentation</caption>
+<center>
+   <tr>
+       <th>Fonction</th>
+       <th>Fichier</th>
+       <th>Comment</th>
+   </tr>
+   <tr>
+       <td>parseDoc</td>
+       <td>parserX.c</td>
+       <td>Parse un fichier OSM et, selon le mode, appelle une fonction pour faire la suite</td>
+   </tr>
+   <tr>
+       <td>nbelement</td>
+       <td>parserX.c</td>
+       <td>Vieille version cherchant linéairement un noeud </td>
+   </tr>
+    <tr>
+       <td>rendu3()</td>
+       <td>Xgraphics.c</td>
+       <td>Zoom et déplacement sur une image BMP (sur les maps trop grosses)</td>
+   </tr>
+    <tr>
+       <td>parseMeteo()</td>
+       <td>meteo.c</td>
+       <td>Parse le document donné avec l'api Meteo</td>
+   </tr>
+       <tr>
+       <td>convert()</td>
+       <td>Xgraphics</td>
+       <td>Permet l'affichage notamment le zoom le déplacement mais aussi l'inclinaison 3D sur l'objet 2D</td>
+   </tr>
+    <tr>
+       <td>parseColour</td>
+       <td>colour.c</td>
+       <td>Parse la couleur de style/style.xml et met les couleurs que vous avez demandé</td>
+   </tr>
+       <tr>
+       <td>deviensvg()</td>
+       <td>parserX.c</td>
+       <td>Charge une image au format SVG de la map.osm</td>
+   </tr>
+       <tr>
+       <td>HASHTABLE</td>
+       <td>Xgraphics</td>
+       <td>c'est la hashmap qui rend plus rapide le chargement de grosses maps</td>
+   </tr>
+    </tr>
+       <tr>
+       <td>linewithwidth()</td>
+       <td>DrawSdl1</td>
+       <td>Fonction qui permet de tracer avec une largeur donnée en paramètre</td>
+   </tr>
+    </tr>
+       <tr>
+       <td>rendu2()</td>
+       <td>Xgraphics.c</td>
+       <td>Fonction principale qui permet de faire le renderer. Elle utilise SDL et SDL gfx</td>
+   </tr>
+      </tr>
+       <tr>
+       <td>dessin()</td>
+       <td>Xgraphics.c</td>
+       <td>Fait suite a rendu2. Elle dessine les images</td>
+   </tr>
+   </br></br>
+   <h2>
+   Quelques infos : </br>
+   -Par defaut les couleurs sont mises un peu au hasard (voir fichier style.xml)</br>
+   -l'ordre de l'affichage est d'abord la couche de la mer -> puis les couches diverses (leisures buildings)
+   </h2>
+</table>
+</center>
+
+
+
+ </section>
+  </body>
+  
+</html>
